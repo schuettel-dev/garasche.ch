@@ -1,0 +1,16 @@
+%div{ data: { controller: 'facilities', 'facilities-initial-facility-value': 'garageA', 'facilities-current-facility-value': nil } }
+
+  %nav.relative.z-0.border-2.border-chocolate-200.rounded-lg.flex.divide-x-2.divide-chocolate-200.w-full
+    %button.py-4.rounded-l-lg.w-full{ data: { 'facilities-target': 'button garageA', action: 'click->facilities#showFacility', 'show-facility': 'garageA' } } Garage A
+    %button.py-4.w-full{ data: { 'facilities-target': 'button garageB', action: 'click->facilities#showFacility', 'show-facility': 'garageB' } } Garage B
+    %button.py-4.rounded-r-lg.w-full{ data: { 'facilities-target': 'button garageC', action: 'click->facilities#showFacility', 'show-facility': 'garageC' } } Garage C
+
+  .grid.grid-cols-1.gap-y-4.mt-10
+    %section{ data: { facilities: { target: 'section garageA' } } }
+      = render GarageAComponent.new
+
+    %section{ data: { facilities: { target: 'section garageB' } } }
+      = render GarageBComponent.new
+
+    %section{ data: { facilities: { target: 'section garageC' } } }
+      = render GarageCComponent.new

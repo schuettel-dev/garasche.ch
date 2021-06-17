@@ -1,0 +1,43 @@
+%h2 Garage B
+
+.my-5
+  %h3.font-bold.mb-2 Bed
+  %p
+    es stehen 3 Doppelzimmer zu Verfügung
+    %br/
+    Zimmer A - B - C
+    %br/
+    WC - Dusche (2.Stock) oder WC - Bad (3.Stock) auf dem Gang
+    %br/
+  .my-8
+    .font-bold Tarife
+    .rounded-lg.overflow-hidden.my-5
+      %table.w-full
+        %tr
+          %th.p-2.bg-chocolate-100
+          %th.p-2.bg-chocolate-100.text-right 1 Nacht
+          %th.p-2.bg-chocolate-100.text-right 5 Nächte
+          %th.p-2.bg-chocolate-100.text-right 1 Woche
+          %th.p-2.bg-chocolate-100.text-right 2 Wochen
+          %th.p-2.bg-chocolate-100.text-right 1 Monat
+        %tr
+          %th.p-2.bg-chocolate-100.text-left eine Person
+          %td.p-2.bg-chocolate-50.text-right 60
+          %td.p-2.bg-chocolate-50.text-right 160
+          %td.p-2.bg-chocolate-50.text-right 200
+          %td.p-2.bg-chocolate-50.text-right 350
+          %td.p-2.bg-chocolate-50.text-right 550
+        %tr
+          %th.p-2.bg-chocolate-100.text-left zwei Personen
+          %td.p-2.bg-chocolate-50.text-right 80
+          %td.p-2.bg-chocolate-50.text-right 240
+          %td.p-2.bg-chocolate-50.text-right 300
+          %td.p-2.bg-chocolate-50.text-right 500
+          %td.p-2.bg-chocolate-50.text-right 750
+    .text-sm.text-right.text-gray-500 alle Preise in CHF
+
+
+  .grid.sm:grid-cols-3.gap-8.my-8
+    .col-span-1= image_pack_tag 'media/images/g_b_1.jpg', alt: 'Zimmer A'
+    .col-span-1= image_pack_tag 'media/images/g_b_2.jpg', alt: 'Zimmer B'
+    .col-span-1= image_pack_tag 'media/images/g_b_3.jpg', alt: 'Zimmer C'

@@ -12,6 +12,7 @@ gem 'rexml'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'turbolinks'
+gem 'view_component', require: 'view_component/engine'
 gem 'webpacker'
 
 group :development, :test do
