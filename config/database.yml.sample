@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: garasche_ch_development
+
+test:
+  <<: *default
+  database: garasche_ch_test
+
+production:
+  <<: *default
+  database: garasche_ch_production
+  username: garasche_ch
+  password: <%= ENV['GARASCHE_CH_DATABASE_PASSWORD'] %>
