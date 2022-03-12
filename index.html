@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>garasche.ch</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="sunshine"></div>
+
+    <header>
+      <div class="flex items-center justify-center">
+        <img alt="Bar Garasche Logo" src="images/garasche.svg" />
+      </div>
+      <h1 class="sr-only">Bar Garasche</h1>
+    </header>
+
+    <main>
+      <section id="todays-opening-hours">
+        <h2>Opening hours</h2>
+        <div data-controller="hours">
+          <div class="inline-grid grid-cols-2 space-x-3">
+            <div class="weekday mon">
+              Monday
+            </div>
+            <div class="opening-hours mon">
+              Closed
+            </div>
+
+            <div class="weekday tue">
+              Tuesday
+            </div>
+            <div class="opening-hours tue">
+              <time>16:00</time> - <time>00:00</time>
+            </div>
+
+            <div class="weekday wed">
+              Wednesday
+            </div>
+            <div class="opening-hours wed">
+              <time>16:00</time> - <time>00:00</time>
+            </div>
+
+            <div class="weekday thu">
+              Thursday
+            </div>
+            <div class="opening-hours thu">
+               <time>16:00</time> - <time>00:00</time>
+            </div>
+
+            <div class="weekday fri">
+              Friday
+            </div>
+            <div class="opening-hours fri">
+               <time>16:00</time> - <time>00:00</time>
+            </div>
+
+            <div class="weekday sat">
+              Saturday
+            </div>
+            <div class="opening-hours sat">
+               <time>16:00</time> - <time>00:00</time>
+            </div>
+
+            <div class="weekday sun">
+              Sunday
+            </div>
+            <div class="opening-hours sun">
+               Closed
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ashraf">
+        <div>
+          <h2>Man liest Ashraf Fayad</h2>
+          <div data-ashraf-current-index-value="0" data-controller="ashraf">
+            <div class="inline-block">
+              <div class="flex justify-between">
+                <div>
+                  <button data-action="click->ashraf#previous" data-ashraf-target="previousButton" class="hidden">Previous</button>
+                </div>
+                <div>
+                  <button data-action="click->ashraf#next" data-ashraf-target="nextButton" class="hidden">Next</button>
+                </div>
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-xl">
+                <img alt="Ashraf Fayed Collage 1" data-ashraf-target="image" src="images/ashraf/collage_1.jpg" loading="lazy" decoding="async" />
+                <img alt="Ashraf Fayed Collage 2" data-ashraf-target="image" src="images/ashraf/collage_2.jpg" loading="lazy" decoding="async" />
+                <img alt="Ashraf Fayed Collage 3" data-ashraf-target="image" src="images/ashraf/collage_3.jpg" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dejuner-sur-lherbe">
+        <h2>Dejuner sur l'Herbe</h2>
+        <div style="padding:56.25% 0 0 0; position:relative; background-color: black;" class="rounded-xl">
+          <iframe src="https://player.vimeo.com/video/29839539?h=85fd010455&color=ea7923&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </section>
+
+      <section id="history">
+        <h2>History</h2>
+        <p>Nun, wie weit soll man zurückgehen?</p>
+        <p>Die GARAGE - als Gebäude existierte sie schon um 1630, auf den sogenannten Fisch- Zeichnungen im historischen Museum Aaraus kann man's sehen.</p>
+        <p>
+          Zu dieser Zeit wurde die GARAGE als Aufgebahrungsort/Gebeinehaus benutzt, da der Kirchplatz zu jener Zeit der Friedhof war. Dieser Hintergrund war wohl auch bestimmend für die nächsten hundert Jahre, der Kirchplatz war ein ruhiger Platz, lebendige Mernschen waren nicht wirklich erwünscht. Später wurde die GARAGE zur Unterkunft des Feuerwehrautos, dann des Autos (ja der altehrwürdige Volvo) der Stadtpolizei und nun seit 2005 ist es ein Unterhaltungs-und Konsumations-Center.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="flex flex-col gap-y-10">
+          <address class="not-italic flex flex-col">
+            <div>Bar Garage Aarau</div>
+            <div>Kirchgasse 6</div>
+            <div>CH-5000 Aarau</div>
+            <div>
+              <a href="tel:+41793221989">+41 79 322 19 89</a>
+            </div>
+            <div>
+              <a href="mailto:sterrrni@gmail.com">Email us</a>
+            </div>
+          </address>
+
+          <a href="https://www.instagram.com/sterrrni/" class="flex items-center gap-x-2 mx-auto">
+            <img src="images/instagram.svg" alt="Instagram logo" class="w-5 h-5"/> Follow us on Instagram
+          </a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
