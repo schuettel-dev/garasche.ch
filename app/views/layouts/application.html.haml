@@ -2,11 +2,16 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title GarascheCh
+    %title garasche.ch
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
     = csrf_meta_tags
     = csp_meta_tag
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload', media: 'all'
   %body
-    = yield
+    .main-width.bg-white.bg-opacity-90.shadow-xl.sm:rounded-xl.my-12.sm:my-24
+      = render SunshineComponent.new
+      = render HeaderComponent.new
+      = render MenuComponent.new
+      = render ContentComponent.new(data: yield)
+      = render FooterComponent.new

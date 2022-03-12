@@ -14,3 +14,5 @@ ActiveStorage.start()
 
 import "controllers"
 import "../styles/application.css"
+
+require.context('../../assets/images', true)

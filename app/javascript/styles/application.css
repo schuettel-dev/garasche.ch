@@ -1,3 +1,22 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
+.main-width {
+  @apply mx-auto max-w-6xl;
+}
+
+.sunshine {
+  @apply top-0 left-0 fixed w-full h-full max-w-full max-h-full bg-no-repeat bg-cover bg-left-bottom;
+  z-index: -100;
+  background-image: url('~sunshine.svg');
+}
+
+.not-current-facility-button {
+  @apply bg-chocolate-50 hover:bg-chocolate-100 transition;
+}
+
+.current-facility-button {
+  @apply bg-chocolate-200;
+}
+
 @import "tailwindcss/utilities";

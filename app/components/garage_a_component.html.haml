@@ -1,0 +1,37 @@
+%h2 Garage A
+
+.my-5
+  %h3.font-bold.mb-2 Bar
+
+  %p
+    mit Konsumation (d.h. auch Personal, da es nicht an einem gewöhnlichen GARAGE Arbeitstag stattfinden kann - nur Sonntags oder Montags.)
+    %br/
+    %br/
+    pro Stunde CHF 30.00
+    %br/
+    ohne Konsumation nicht möglich
+    %br/
+  .grid.sm:grid-cols-3.gap-8.my-8
+    .col-span-1
+      = image_pack_tag('media/images/g_a_bar_1.jpg', alt: 'Bar von rechts')
+    .col-span-1
+      = image_pack_tag('media/images/g_a_bar_2.jpg', alt: 'Bar frontal')
+    .col-span-1
+      = image_pack_tag('media/images/g_a_bar_3.jpg', alt: 'Bar von links')
+    .col-span-full
+      = image_pack_tag 'media/images/suppengarage.jpg', alt: 'Flyer Suppengarage'
+
+  %h3.font-bold.mb-2 Hinterschtübli
+  %p
+    für ein gemütliches Geschäftsessen, eine Geburtstagsparty, eine Sitzung zum Umsturz der Regierung oder was auch immer
+    %br/
+    %br/
+    mit Konsumation aus der GARAGE CHF 40.00
+    %br/
+    ohne Konsumation CHF 100.00
+    %br/
+  .grid.sm:grid-cols-2.gap-8.my-8
+    .col-span-1
+      = image_pack_tag 'media/images/g_a_hinterschtuebli_1.jpg', alt: 'Hinterschtuebli von rechts'
+    .col-span-1
+      = image_pack_tag 'media/images/g_a_hinterschtuebli_2.jpg', alt: 'Hinterschtuebli von links'
