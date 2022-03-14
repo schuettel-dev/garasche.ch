@@ -11,10 +11,16 @@ npm install
 ## Local development
 
 ```sh
-npm run dev
+npm run serve
 ```
 
-## Deploy locally
+## Tests
+
+```sh
+npm run test
+```
+
+## Build locally
 
 (builds into `./dist`)
 
@@ -24,5 +30,5 @@ npm run build
 
 ## Deploy production
 
-`npm run build` happens automatically on GitHub on `push` to `main` branch. See `.github/workflows/gh-pages.yml`
+`npm run build` happens automatically on GitHub on `push` to `main` branch. See `.github/workflows/ci.yml`
 
