@@ -1,16 +1,16 @@
 env:
-  NODE_VERSION: '14'
+  NODE_VERSION: '16'
 
-name: github pages
+name: Continuous Integration
 
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - 'main'  # Set a branch to deploy
   pull_request:
 
 jobs:
-  deploy:
+  continuous_integration:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -21,6 +21,9 @@ jobs:
 
       - name: Install node packages
         run: npm install
+
+      - name: Test
+        run: npm run test
 
       - name: Build
         run: NODE_ENV=production npm run build
