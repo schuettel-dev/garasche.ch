@@ -44,19 +44,13 @@ describe('home', () => {
     cy.clock(new Date(2022, 2, 15).getTime());
     cy.visit('/');
     cy.get('section#opening-hours').within(() => {
-      cy.get('[data-weekday=mon]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=tue]').should('have.class', 'highlighted');
-      cy.get('[data-weekday=wed]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=thu]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=fri]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=sat]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=sun]').should('not.have.class', 'highlighted');
-    });
-
-    cy.get('section#sultan').within(() => {
-      cy.get('[data-weekday=thu]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=fri]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=sat]').should('not.have.class', 'highlighted');
+      cy.get('.weekday.mon').should('not.have.class', 'highlighted');
+      cy.get('.weekday.tue').should('have.class', 'highlighted');
+      cy.get('.weekday.wed').should('not.have.class', 'highlighted');
+      cy.get('.weekday.thu').should('not.have.class', 'highlighted');
+      cy.get('.weekday.fri').should('not.have.class', 'highlighted');
+      cy.get('.weekday.sat').should('not.have.class', 'highlighted');
+      cy.get('.weekday.sun').should('not.have.class', 'highlighted');
     });
   });
 
@@ -65,19 +59,13 @@ describe('home', () => {
     cy.clock(new Date(Date.UTC(2022, 2, 17, 23, 0, 0)).getTime());
     cy.visit('/');
     cy.get('section#opening-hours').within(() => {
-      cy.get('[data-weekday=mon]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=tue]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=wed]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=thu]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=fri]').should('have.class', 'highlighted');
-      cy.get('[data-weekday=sat]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=sun]').should('not.have.class', 'highlighted');
-    });
-
-    cy.get('section#sultan').within(() => {
-      cy.get('[data-weekday=thu]').should('not.have.class', 'highlighted');
-      cy.get('[data-weekday=fri]').should('have.class', 'highlighted');
-      cy.get('[data-weekday=sat]').should('not.have.class', 'highlighted');
+      cy.get('.weekday.mon').should('not.have.class', 'highlighted');
+      cy.get('.weekday.tue').should('not.have.class', 'highlighted');
+      cy.get('.weekday.wed').should('not.have.class', 'highlighted');
+      cy.get('.weekday.thu').should('not.have.class', 'highlighted');
+      cy.get('.weekday.fri').should('have.class', 'highlighted');
+      cy.get('.weekday.sat').should('not.have.class', 'highlighted');
+      cy.get('.weekday.sun').should('not.have.class', 'highlighted');
     });
   });
 })
