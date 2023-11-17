@@ -71,7 +71,7 @@ Stimulus.register("ashraf", class extends Controller {
 Stimulus.register("hours", class extends Controller {
   connect() {
     const weekday = new Date().toLocaleString('en-US', { weekday: 'short', timeZone: 'Europe/Zurich' });
-    this.element.querySelectorAll(`[data-weekday=${weekday.toLowerCase()}]`).forEach((element) => element.classList.add('highlighted'));
+    this.element.querySelectorAll(`.${weekday.toLowerCase()}`).forEach((element) => element.classList.add('highlighted'));
 
   }
 })
